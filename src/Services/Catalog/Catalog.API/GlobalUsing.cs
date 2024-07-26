@@ -10,3 +10,6 @@ global using BuildingBlocks.Exceptions;
 global using BuildingBlocks.Behaviors;
 global using BuildingBlocks.Extentions;
 global using BuildingBlocks.Handler;
+global using Catalog.API.Data;
+global using Marten.Pagination;
+
