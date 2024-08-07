@@ -1,4 +1,4 @@
-﻿using Carter;
+﻿using BuildingBlocks.Handler;
 
 namespace Ordering.API;
 
@@ -8,12 +8,16 @@ public static class DependencyInjection
     {
         services.AddCarter();
 
+        services.AddExceptionHandler<CustomExceptionHandler>();
+
         return services;
     }
 
     public static WebApplication UseApiServices(this WebApplication app)
     {
         app.MapCarter();
+
+        app.UseExceptionHandler(options => { });
 
         return app;
     }
