@@ -12,7 +12,7 @@ public class IndexModel
         //var result = await catalogService.GetProducts(2, 3);
         ProductList = result.Products;
         return Page();
-    }
+    } 
 
     public async Task<IActionResult> OnPostAddToCartAsync(Guid productId)
     {
